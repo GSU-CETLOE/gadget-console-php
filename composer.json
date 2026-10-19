@@ -1,0 +1,53 @@
+{
+  "name": "mjfk23/gadget-console",
+  "description": "Gadget library for console apps",
+  "type": "library",
+  "keywords": [],
+  "homepage": "https://github.com/mjfk23/gadget-console",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Melody Kimball",
+      "role": "lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/mjfk23/gadget-console/issues",
+    "wiki": "https://github.com/mjfk23/gadget-console/wiki",
+    "source": "https://github.com/mjfk23/gadget-console"
+  },
+  "require": {
+    "php": "^8.1",
+    "mjfk23/gadget-core": "^2.0",
+    "mjfk23/gadget-log": "^2.0",
+    "mjfk23/gadget-process": "^1.0",
+    "symfony/console": "6.4.*",
+    "symfony/event-dispatcher": "6.4.*"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.0",
+    "phpstan/phpstan-strict-rules": "^2.0",
+    "phpstan/extension-installer": "^1.4",
+    "squizlabs/php_codesniffer": "^3.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gadget\\Console\\": [
+        "src/",
+        "bundle/"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "apcu-autoloader": true
+  },
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs",
+    "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
+  }
+}
