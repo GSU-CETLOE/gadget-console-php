@@ -1,6 +1,7 @@
 parameters:
-        tmpDir: vendor/tmp/phpstan
+        tmpDir: working/phpstan
         level: 10
         paths:
-                - bundle
                 - src
+                - bundle
+                - tests
